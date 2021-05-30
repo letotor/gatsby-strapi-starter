@@ -1,6 +1,13 @@
 let facebook_pixel = ''
 let gtm = '1234'
 
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+console.log(`Using environment config: '${activeEnv}'`)
+require("dotenv").config({
+  path: `.env.${activeEnv}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `DGwebcreation`,
@@ -20,22 +27,17 @@ module.exports = {
     "gatsby-plugin-robots-txt",
     `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,
-    
+
     {
       resolve: `gatsby-plugin-sharp`,
-            options: {
-                defaults: {
-                    formats: [
-                        `auto`,
-                        `webp`,
-                        `avif`,
-                    ],
-                    quality: 100,
-                    placeholder: "blurred",
-                },
-            },
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`, `avif`],
+          quality: 100,
+          placeholder: "blurred",
+        },
+      },
     },
-
 
     {
       resolve: `gatsby-source-filesystem`,
@@ -77,7 +79,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: process.env.STRAPI_API_URL,
         queryLimit: 1000, // Default to 100
         // contentTypes: [`article`, `user`],
         contentTypes: [`jobs`, `formations`],
