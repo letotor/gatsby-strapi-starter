@@ -10,12 +10,14 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import Footer from "./footer"
-import SubFooter from "./subFooter"
-import "../assets/stylesheets/layout.scss"
-import {ThemeProvider} from 'styled-components'
-import theme from '../assets/stylesheets/theme'
-import Banner from './banner'
+ import "../assets/stylesheets/layout.scss"
+import Main from './Main'
+
+// import Jobs from './Jobs'
+import siteConfig from '../data/siteConfig'
+
+import Formations from './Formations'
+// import ImageJs from '../templates/image'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,15 +31,21 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
+
+  // MuiThemeProvider theme={theme}
   let {title, phone, address} = data.site.siteMetadata
   return (
-    <ThemeProvider theme={theme}>
-      <Banner title={title} phone={phone} address={address}/>
-      <Header siteTitle={title}/>
-      <main>{children}</main>
-      <Footer/>
-      <SubFooter title={title}/>
-    </ThemeProvider>
+    <>
+
+      <Header siteTitle={title} />
+      <h1>gatsby</h1>
+
+      {/* <main>{children}</main> */}
+      {/* <Formations /> */}
+      <Main></Main>
+      {/* <ImageJs/> */}
+    </>
   )
 }
 

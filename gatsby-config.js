@@ -3,19 +3,40 @@ let gtm = '1234'
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Landing Page Starter`,
-    description: `A slightly opinionated Gatsby Landing Page starter template. `,
-    author: `Jeremy Lynch`,
-    siteUrl: `https://gatsby-strapi-starter.netlify.com/`,
-    phone: '1800123456',
-    fax: '180012345',
-    address: '123 fake street',
-    email: 'contact@test.com'
-
+    title: `DGwebcreation`,
+    description: `Créacteur, intégrateur et maintenance de votre site web `,
+    author: `Victor de GERMAIN`,
+    siteUrl: `https://cv-vgwebcreation.netlify.app`,
+    phone: "06 16 80 17 46",
+    fax: "",
+    address: "1 Plaisance 44260 Lavau sur loire",
+    email: "v.degermain@gmail.com",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sitemap`,
+    "gatsby-plugin-robots-txt",
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-image`,
+    
+    {
+      resolve: `gatsby-plugin-sharp`,
+            options: {
+                defaults: {
+                    formats: [
+                        `auto`,
+                        `webp`,
+                        `avif`,
+                    ],
+                    quality: 100,
+                    placeholder: "blurred",
+                },
+            },
+    },
+
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,29 +45,50 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-tagmanager',
+      resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: gtm,
-        includeInDevelopment: false
-      }
+        includeInDevelopment: false,
+      },
     },
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
         pixelId: facebook_pixel,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: './src/assets/images/gatsby-icon.png'
+        icon: "./src/assets/images/gatsby-icon.png",
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
-    'gatsby-plugin-robots-txt',
-    `gatsby-plugin-netlify`,
-    `gatsby-plugin-styled-components`
+
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // ssr: false
+        // displayName: false,
+        // minify: false
+        // see docs
+      },
+    },
+
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Default to 100
+        // contentTypes: [`article`, `user`],
+        contentTypes: [`jobs`, `formations`],
+        //If using single types place them in this array.
+        //  singleTypes: [`home-page`, `top-left-menu`],
+        // Possibility to login with a strapi user, when content types are not publically available (optional).
+        loginData: {
+          identifier: "",
+          password: "",
+        },
+      },
+    },
   ],
 }
