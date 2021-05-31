@@ -479,7 +479,7 @@ module.exports = {
 
   siteUrl: "https://www/gatsbystarter-cv",
   pathPrefix: "/gatsby-starter-cv", // Note: it must *not* have a trailing slash.
-  siteCover: "/images/cover.jpeg",
+  siteCover: "../assets/images/sample.png",
   googleAnalyticsId: "UA-000000000-1",
 
   display: "minimal-ui",
