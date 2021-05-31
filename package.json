@@ -38,7 +38,7 @@
     "react-switch": "^6.0.0",
     "reactstrap": "^8.8.1",
     "reactstrap-form-fields": "^1.0.8",
-    "reactstrap-json-nav": "^1.0.2",
+    "reactstrap-json-nav": "^1.0.3",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.0"
   },

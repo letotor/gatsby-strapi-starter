@@ -11791,7 +11791,7 @@ reactstrap-form-fields@^1.0.8:
     react-dom "^16.13.1"
     reactstrap "^6.5.0"
 
-reactstrap-json-nav@^1.0.2:
+reactstrap-json-nav@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/reactstrap-json-nav/-/reactstrap-json-nav-1.0.3.tgz#5547012f4fbe5390941043e61811e2cf6c098356"
   integrity sha512-6Om3JOvoJwmeGy8BodlXOhhi6MIt3792adWEXrssg6s3oJ8UdMmCDHw/mY3ElaXdDe911BFiAbeLFe9l42rwmA==
