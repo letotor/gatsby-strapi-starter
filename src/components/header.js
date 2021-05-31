@@ -15,6 +15,7 @@ let StyledNavbar = styled(props => <Navbar {...props}/>)`
   position: sticky;
   top: 0;
   z-index: 10;
+  background-color: transparent;
 `
 
 const Header = (props) => {
