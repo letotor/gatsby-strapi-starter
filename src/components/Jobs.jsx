@@ -4,21 +4,28 @@ import { useStaticQuery, graphql } from "gatsby"
 
 
 const Jobs = () => {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     allStrapiJobs(sort: { fields: strapiId, order: ASC }) {
-  //       nodes {
-  //         strapiId
-  //         company
-  //         date
-  //         position
-  //         desc {
-  //           name
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+
+
+  const data = useStaticQuery(graphql`
+    {
+      allStrapiJobs(sort: { fields: date, order: DESC }) {
+        nodes {
+          strapiId
+          id
+          company
+          date
+          position
+          task {
+            id
+            name
+          }
+        }
+      }
+    }
+  `)
+
+
+
   const [value, setValue]=useState(0)
   // const { allStrapiJobs: {
   //       nodes: jobs},}=data
@@ -30,11 +37,11 @@ const Jobs = () => {
   return (
     <section className="jobs">
       <h2>JOB COMMPONENT</h2>
-      {/* <pre>{JSON.stringify(data, null, 4)}</pre> */}
+      <pre>{JSON.stringify(data, null, 4)}</pre>
     </section>
   )
     
-    // </>)
+
 }
 
 
