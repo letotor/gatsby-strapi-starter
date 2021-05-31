@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import AOS from "aos"
 
 
-import Header from "./Header"
+import Header from "./HeaderTest"
 import Footer from "./Footer"
 import Hero from "./Hero"
 import Main from "./Main"
