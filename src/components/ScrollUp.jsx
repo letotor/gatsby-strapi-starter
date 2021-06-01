@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components'
-import { FaChevronUp} from "react-icons/fa"
+import {FaChevronUp} from "react-icons/fa"
 
 
 const ScrollUp = () =>{
@@ -11,6 +11,7 @@ const ScrollButton = styled.button`
       display: none !important;
   }
 `;
+
  
 
 
@@ -44,8 +45,8 @@ if (typeof window !== "undefined") {
         type="button"
         onClick={scrollTop}
         style={{ height: 40, display: showScroll ? "flex" : "none" }}
-      >
-       <FaChevronUp/>
+      >^
+         <FaChevronUp/>
       </ScrollButton>
     </>
   )

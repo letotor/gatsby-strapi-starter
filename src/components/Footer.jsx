@@ -1,10 +1,20 @@
 import React from 'react'
-import ScrollUp from './ScrollUp'
+
+import { FaFacebook, FaGithub, FaInstagram, FaChevronUp } from "react-icons/fa"
+import styled from 'styled-components'
 
 const Footer = () => {
+const MediaLink=styled.a`
+  background-color: transparent;
+  &:hover{
+    opacity:0.3;
+  }
+`
+
+
+
     return (
       <>
-       
         {/* <h1>FOOTER COMPONENT</h1>  */}
         <footer className="pt-4 pb-4 text-muted text-center">
           <div className="container d-print-none">
@@ -16,44 +26,41 @@ const Footer = () => {
                 data-scroll="up"
                 type="button"
               >
-                <i className="fa fa-chevron-up"></i>
+               <FaChevronUp/>
               </button>
 
               <div className="footer-nav">
                 <nav role="navigation">
                   <ul className="nav justify-content-center">
                     <li className="nav-item">
-                      <a
+                      <MediaLink
                         className="nav-link"
                         target="_blank"
                         href="https://www.facebook.com/VGWebcreation"
                         title="Facebook"
                       >
-                        <i className="fab fa-facebook"></i>
-                        <span className="menu-title sr-only">Facebook</span>
-                      </a>
+                        <FaFacebook size={44} color="#333333" />
+                      </MediaLink>
                     </li>
                     <li className="nav-item">
-                      <a
+                      <MediaLink
                         className="nav-link"
                         target="_blank"
                         href="https://www.instagram.com/artisan_de_la_permaculture2.0/"
                         title="Instagram"
                       >
-                        <i className="fab fa-instagram"></i>
-                        <span className="menu-title sr-only">Instagram</span>
-                      </a>
+                        <FaInstagram size={44} color="#333333" />
+                      </MediaLink>
                     </li>
                     <li className="nav-item">
-                      <a
+                      <MediaLink
                         className="nav-link"
                         target="_blank"
                         href="https://github.com/letotor"
                         title="Github"
                       >
-                        <i className="fab fa-github"></i>
-                        <span className="menu-title sr-only">Github</span>
-                      </a>
+                        <FaGithub size={44} color="#262626" />
+                      </MediaLink>
                     </li>
                   </ul>
                 </nav>
@@ -61,7 +68,7 @@ const Footer = () => {
             </div>
             <div className="mb-1">
               &copy;
-              <a href="https://vgwebcreation.fr/" target="_blank">
+              <a href="https://DGwebcreation.fr/" target="_blank">
                 VGWebcreation
               </a>
               2021. Tous droits réservés
@@ -69,7 +76,7 @@ const Footer = () => {
           </div>
         </footer>
       </>
-    );
+    )
 }
 
 export default Footer

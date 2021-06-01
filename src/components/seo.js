@@ -16,64 +16,86 @@ function SEO({ description, lang, meta, title }) {
       query {
         site {
           siteMetadata {
+            google
             title
             description
             author
+            siteUrl
+            email
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  //destructuring
+    // const {siteMetadata: {google, title, description, author, siteUrl, email,}} = site
+      
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+    <Helmet>
+      <title>{site.siteMetadata.description}</title>
+      <meta name="description" content={site.siteMetadata.description} />
+      <meta name="keywords" content={site.siteMetadata.author} />
+      <meta name="author" content={site.siteMetadata.author} />
+      <meta name="url" content={site.siteMetadata.siteUrl} />
+      <meta
+        name="google-site-verification"
+        content={site.siteMetadata.google}
+      />
+    </Helmet>
+    // <Helmet
+    //   htmlAttributes={{
+    //     lang,
+    //   }}
+    //   title={title}
+    //   titleTemplate={`%s | ${site.siteMetadata.title}`}
+    //   meta={[
+
+    //     {
+
+    //        name: "google-site-verification",
+    //       content: `${site.siteMetadata.google}`,
+    //     },
+    //     {
+    //       name: `description`,
+    //       content: metaDescription,
+    //     },
+    //     {
+    //       property: `og:title`,
+    //       content: title,
+    //     },
+    //     {
+    //       property: `og:description`,
+    //       content: metaDescription,
+    //     },
+    //     {
+    //       property: `og:type`,
+    //       content: `website`,
+    //     },
+    //     {
+    //       name: `twitter:card`,
+    //       content: `summary`,
+    //     },
+    //     {
+    //       name: `twitter:creator`,
+    //       content: site.siteMetadata.author,
+    //     },
+    //     {
+    //       name: `twitter:title`,
+    //       content: title,
+    //     },
+    //     {
+    //       name: `twitter:description`,
+    //       content: metaDescription,
+    //     },
+    //   ].concat(meta)}
+    // />
   )
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `fr`,
   meta: [],
   description: ``,
 }

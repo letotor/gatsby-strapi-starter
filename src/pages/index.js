@@ -3,6 +3,7 @@ import React from "react"
 // import {Button} from 'reactstrap'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Helmet from "react-helmet"
 import { FaGithub, FaBolt, FaHome, FaWrench } from 'react-icons/fa'
 
 import styled from 'styled-components'
@@ -21,9 +22,15 @@ let StyledBackground = styled.div`
 
 
 let Index = () => (
-  <Layout>
-    <SEO title="Home" />
-    {/* <Button>
+  <>
+    <SEO
+      description="Cv V de GERMAIN strapi gatsby"
+      lang="fr"
+      meta=""
+      title="CV Victor de GERMAIMN gatsby strapi"
+    />
+    <Layout>
+      {/* <Button>
       <FaHome />
     </Button>
 
@@ -35,8 +42,8 @@ let Index = () => (
         <FaGithub className="mr-1" />
         View on Github
       </Button> */}
-
-  </Layout>
+    </Layout>
+  </>
 )
 
 export default Index

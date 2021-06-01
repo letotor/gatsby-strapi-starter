@@ -10,13 +10,14 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
+    google:`rdHgeMNE19n12z27_OXvkv_MuTFSHl8lQPesFHLk21oU`,
     title: `DGwebcreation`,
     description: `Créacteur, intégrateur et maintenance de votre site web `,
     author: `Victor de GERMAIN`,
-    siteUrl: `https://cv-vgwebcreation.netlify.app`,
-    phone: "06 16 80 17 46",
+    siteUrl: `https://gatsbycvvgwebcreation.gtsb.io/`,
+    phone: "06 XX XX XX 46",
     fax: "",
-    address: "1 Plaisance 44260 Lavau sur loire",
+    address: "Lavau sur loire",
     email: "v.degermain@gmail.com",
   },
   plugins: [
