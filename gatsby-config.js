@@ -27,6 +27,7 @@ module.exports = {
     "gatsby-plugin-robots-txt",
     `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-smoothscroll`,
 
     {
       resolve: `gatsby-plugin-sharp`,

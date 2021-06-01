@@ -16,8 +16,8 @@ import Header from "./HeaderTest"
 import Footer from "./Footer"
 import Hero from "./Hero"
 import Main from "./Main"
-//import siteConfig from "./data/siteConfig"
-// import ScrollUp from "./ScrollUp"
+
+ import ScrollUp from "./ScrollUp"
 // import withprefix from '../gastby'
 
 // Gestion du theme provider
@@ -137,7 +137,7 @@ const Layout = ({ children }) => {
           </div>
         </Container>
         {/* </div> */}
-        {/* <ScrollUp /> */}
+        <ScrollUp />
         <Footer />
         {/* Historique des versions */}
         <hr className="d-print-none-off"></hr>

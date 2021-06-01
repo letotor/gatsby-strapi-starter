@@ -13,6 +13,8 @@ import  '../assets/css/css/main.css'
 import  '../assets/css/css/dark-theme.css'
 import  '../assets/css/css/print.css'
 
+
+import scrollTo from "gatsby-plugin-smoothscroll"
 let StyledBackground = styled.div`
   background: linear-gradient(to bottom,#598fc6 0,#fff 100%);
 `
