@@ -9,7 +9,6 @@
 import React, { useState, useEffect } from "react"
 import { Container } from "reactstrap"
 import { useStaticQuery, graphql } from "gatsby"
-import AOS from "aos"
 
 
 import Header from "./HeaderTest"
@@ -61,15 +60,8 @@ const Layout = ({ children }) => {
   `
 
   const StyledSwitch = styled(Switch).attrs((props) => ({}))``
-  /*Iniialisation d'aos
-   */
-  useEffect(() => {
-    AOS.init({
-      anchorPlacement: "top-left",
-      duration: 1300,
-    })
-    // AOS.init({ disable: true });
-  }, [])
+ 
+
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -96,7 +88,7 @@ const Layout = ({ children }) => {
         {siteConfig.enableDarkmode && (
           <SwitchWrapper>
             <StyledSwitch
-              className="col-lg-1 col-md-1 d-print-none"
+             
               id="darkTrigger"
               // className="btn btn-dark  rounded-pill"
               onChange={themeToggler}

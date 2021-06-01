@@ -68,14 +68,14 @@ console.log("---->formation : ", strapiId, logo, type, title, visible, where, ye
               <Badge
                 className="pull-right m-2"
                 color="success"
-                backgroundColor="purple"
+                // backgroundColor="purple"
               >
                 {year}
               </Badge>
               <Badge
                 className="pull-right m-2"
                 color="primary"
-                backgroundColor="purple"
+                // backgroundColor="purple"
               >
                 {type}
               </Badge>
@@ -85,7 +85,7 @@ console.log("---->formation : ", strapiId, logo, type, title, visible, where, ye
                 <img
                   src={srcLogo}
                   alt=""
-                  srcset={srcLogo}
+                  srcSet={srcLogo}
                   width="100%"
                   height="200px"
                   object-fit="contain"
