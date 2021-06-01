@@ -168,7 +168,7 @@ module.exports = {
                     Mise à disposition d'un large choix de bibliothèques pour la gestion des catalogues fournisseurs.`,
       task: [
         ` Maintenance corrective.`,
-        `Développement de batch java pour la gestion de catalogue.`,
+        ` Développement de batch java pour la gestion de catalogue.`,
         ` Mise à jour et conversion pour la gestion catalogue (DBISAM - mariadb)`,
         ` Intégration de service de devis externe (api rest).`,
         ` Intégration des données des différents fournisseurs dans la fullweb V5`,

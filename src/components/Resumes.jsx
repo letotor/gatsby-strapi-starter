@@ -1,7 +1,7 @@
 import React , {useState} from 'react'
 // import { authorDescriptionMore } from '../data/siteConfig';
 import styled from 'styled-components'
-
+import { FaPlusCircle } from "react-icons/fa"
 
 
 
@@ -112,8 +112,8 @@ const Resumes = ({resumeCourt, resumeLong,resumeCompany,color, contact}) => {
                 color={color}
                 onClick={() => setReadMore(!readMore)}
               >
-                {readMore && <i className="fas fa-plus-circle"></i>}
-                {!readMore && <i className="fas fa-minus-circle"></i>}
+                {readMore && <FaPlusCircle/>}
+                {!readMore &&  <FaPlusCircle/>}
               </Button>
             </a>
           </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 // import aos from'aos';
 
+import { FaRegArrowAltCircleRight } from "react-icons/fa"
 const Exp = ({jobs}) => {
   const keywords = jobs.keywords
   const tasks = jobs.task
@@ -8,7 +9,7 @@ const Exp = ({jobs}) => {
       <>
         {/* <h1>EXPERIENCE PRO COMPONENT</h1> */}
         <div
-          data-aos="zoom-in-up" 
+          data-aos="zoom-in-up"
           className="timeline-card timeline-card-primary card shadow-sm"
         >
           <div className="card-body">
@@ -33,7 +34,8 @@ const Exp = ({jobs}) => {
             <div>
               {tasks.map((task, index) => (
                 <div key={index}>
-                  <i className="far fa-arrow-alt-circle-right">{task}</i>
+                  <FaRegArrowAltCircleRight />
+                  {task}
                 </div>
               ))}
             </div>
@@ -59,7 +61,7 @@ const Exp = ({jobs}) => {
           </div>
         </div>
       </>
-    );
+    )
 }
 
 export default Exp
