@@ -25,10 +25,15 @@ const ScrollButton = styled.button`
   };
 
   const scrollTop = () =>{
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    if (typeof window !== "undefined") {
+      // it's safe to use window now
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
   };
-
+if (typeof window !== "undefined") {
+  // it's safe to use window now
   window.addEventListener('scroll', checkScrollTop)
+}
 
   return (
     <>
