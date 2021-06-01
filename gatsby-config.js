@@ -10,7 +10,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    google:`rdHgeMNE19n12z27_OXvkv_MuTFSHl8lQPesFHLk21oU`,
+    google: `bckrXFVr91bgwp1o8wdtcaTdpzmp3Jq7vEKSyP4Wy9s`,
     title: `DGwebcreation`,
     description: `Créacteur, intégrateur et maintenance de votre site web `,
     author: `Victor de GERMAIN`,
