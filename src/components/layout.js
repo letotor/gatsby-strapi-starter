@@ -7,13 +7,14 @@
 
 
 import React, { useState, useEffect } from "react"
-import { Container } from "reactstrap"
+ import { Container } from "reactstrap"
 import { useStaticQuery, graphql } from "gatsby"
 
 
-import Header from "./HeaderTest"
+import NavBarre from "./NavBarre"
+import Header from "./Header"
 import Footer from "./Footer"
-import Hero from "./Hero"
+import Hero from "./Hero/HeroCore"
 import Main from "./Main"
 
  import ScrollUp from "./ScrollUp"
@@ -22,8 +23,8 @@ import Main from "./Main"
 // Gestion du theme provider
 // import dummyData from "./data";
 import styled, { ThemeProvider } from "styled-components"
-import { GlobalStyles } from "./globalStyle"
-import { lightTheme, darkTheme } from "./themes"
+import { GlobalStyles } from "./ThemeGlobalStyle/globalStyle"
+import { lightTheme, darkTheme } from "./ThemeGlobalStyle/themes"
 
 import Switch from "react-switch"
 import { FiSun, FiMoon } from "react-icons/fi"
@@ -58,7 +59,9 @@ const Layout = ({ children }) => {
     opacity: 0.6;
     z-index: 100;
   `
-
+const StyledNavbarre =styled(NavBarre)`
+  color:red;
+`
   const StyledSwitch = styled(Switch).attrs((props) => ({}))``
  
 
@@ -88,7 +91,6 @@ const Layout = ({ children }) => {
         {siteConfig.enableDarkmode && (
           <SwitchWrapper>
             <StyledSwitch
-             
               id="darkTrigger"
               // className="btn btn-dark  rounded-pill"
               onChange={themeToggler}
@@ -111,26 +113,26 @@ const Layout = ({ children }) => {
         {/* </div> */}
         {/* // <button onClick={}>Switch Theme</button> */}
         {/* <div className="page-content ml-3"> */}
-        <Container fluid={false}>
+
+        <Container>
           <Header
-            headerImg={siteConfig.siteCover}
+            headerImg="DGwebCreation" //{siteConfig.siteCover}
             authorName={siteConfig.authorName}
             monurl="url"
             urlCurrent={""} /*{url_Function}*/
           />
-          <div className="cover shadow-lg bg-white">
-            <Hero
-              titre={siteConfig.siteTitle}
-              subTitle={siteConfig.subTitle}
-              //  avatar={withPrefix(siteConfig.authorAvatar)}
-            />
 
-            <Main></Main>
-          </div>
+          <Hero
+            titre={siteConfig.siteTitle}
+            subTitle={siteConfig.subTitle}
+            //  avatar={withPrefix(siteConfig.authorAvatar)}
+          />
+
+          <Main />
         </Container>
         {/* </div> */}
-        <ScrollUp />
         <Footer />
+        <ScrollUp />
         {/* Historique des versions */}
         <hr className="d-print-none-off"></hr>
         <Version></Version>

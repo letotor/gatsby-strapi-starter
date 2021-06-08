@@ -34,9 +34,17 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          formats: [`auto`, `webp`, `avif`],
-          quality: 100,
-          placeholder: "blurred",
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
         },
       },
     },
@@ -71,7 +79,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        // ssr: false
+        ssr: true
         // displayName: false,
         // minify: false
         // see docs
@@ -86,7 +94,7 @@ module.exports = {
         // contentTypes: [`article`, `user`],
         contentTypes: [`jobs`, `formations`],
         //If using single types place them in this array.
-        //  singleTypes: [`home-page`, `top-left-menu`],
+          singleTypes: [`hero`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {
           identifier: "",

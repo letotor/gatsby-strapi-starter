@@ -3,14 +3,18 @@ import React from 'react'
 import { FaFacebook, FaGithub, FaInstagram, FaChevronUp } from "react-icons/fa"
 import styled from 'styled-components'
 
-const Footer = () => {
-const MediaLink=styled.a`
+
+
+
+const MediaLink = styled.a`
   background-color: transparent;
-  &:hover{
-    opacity:0.3;
+  &:hover {
+    opacity: 0.3;
   }
 `
 
+
+const Footer = () => {
 
 
     return (
@@ -21,14 +25,7 @@ const MediaLink=styled.a`
             <div className="my-3">
               <div className="h4">Victor de GERMAIN</div>
 
-              <button
-                className="btn btn-primary scroll-top"
-                data-scroll="up"
-                type="button"
-              >
-               <FaChevronUp/>
-              </button>
-
+            
               <div className="footer-nav">
                 <nav role="navigation">
                   <ul className="nav justify-content-center">

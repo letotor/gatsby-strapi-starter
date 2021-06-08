@@ -3,7 +3,10 @@ import React , {useState} from 'react'
 import styled from 'styled-components'
 import { FaPlusCircle } from "react-icons/fa"
 
-
+const Adresse = styled.div`
+  border: 2px solid #4a89dc;
+  border-radius: 7px;
+`
 
 const Resumes = ({resumeCourt, resumeLong,resumeCompany,color, contact}) => {
     
@@ -48,7 +51,7 @@ const Resumes = ({resumeCourt, resumeLong,resumeCompany,color, contact}) => {
             </div>
 
             <div className=" col-md-5 order-first order-md-last offset-md-1">
-              <div id="etatcivil" className=" row mt-2">
+              <Adresse id="etatcivil" className=" row mt-2">
                 {/* <div className="col-sm-4">
                                 <div className="pb-1">Age</div>
                             </div>
@@ -80,7 +83,7 @@ const Resumes = ({resumeCourt, resumeLong,resumeCompany,color, contact}) => {
                 <div className="col-sm-8">
                   <div className="pb-1 text-secondary">{contact.adresse}</div>
                 </div>
-              </div>
+              </Adresse>
             </div>
           </div>
 
@@ -112,14 +115,14 @@ const Resumes = ({resumeCourt, resumeLong,resumeCompany,color, contact}) => {
                 color={color}
                 onClick={() => setReadMore(!readMore)}
               >
-                {readMore && <FaPlusCircle/>}
-                {!readMore &&  <FaPlusCircle/>}
+                {readMore && <FaPlusCircle />}
+                {!readMore && <FaPlusCircle />}
               </Button>
             </a>
           </div>
         </div>
       </>
-    );
+    )
 }
 
 export default Resumes

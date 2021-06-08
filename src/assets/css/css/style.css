@@ -13,7 +13,7 @@ body {
 
 
 #header-menu {
-  margin-top: -40px;
+  /* margin-top: -40px; */
 }
 
 #formation ~ .card-body {
@@ -38,8 +38,8 @@ color: #ffffff;
 /* fin Badge keyword  */
 
 #contact, #etatcivil {
-  border:2px solid #4a89dc;
-  border-radius: 7px;
+  /* border:2px solid #4a89dc;
+  border-radius: 7px; */
   /* padding: 0px 10px 300px 10px; */
 }
 

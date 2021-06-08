@@ -4,22 +4,35 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import AOS from 'aos'
 
-import styled from "styled-components"
-import "../assets/css/css/bootstrap.min.css"
+/**
+ * import bootstrap par defaut pour le CV
+ */
+// import "../assets/css/css/bootstrap.min.css"
+/**
+ * surcharge du fichier bootstrap pour le style */ 
 import "../assets/css/css/style.css"
-import "../assets/css/css/site.css"
+// import "../assets/css/css/site.css"
 import "../assets/css/css/main.css"
 import "../assets/css/css/dark-theme.css"
 import "../assets/css/css/print.css"
 import "../assets/css/css/aos.css"
 
-import scrollTo from "gatsby-plugin-smoothscroll"
-let StyledBackground = styled.div`
-  background-color: linear-gradient(to bottom, #598fc6 0, #fff 100%);
-`
 
+/**
+ * Import bootstrap fontawson pour MDBoostrap
+ */
+import "@fortawesome/fontawesome-free/css/all.min.css"
+import "bootstrap-css-only/css/bootstrap.min.css"
+import "mdbreact/dist/css/mdb.css"
+
+/**
+ * Point d'entrée de l'application REACTJs
+ */
 const  Index = () => {
 
+  /**
+   * Gestion des effet sur composant avec AOS 
+   */
   useEffect(() => {
     console.log("use effect aos")
     AOS.init({
@@ -32,25 +45,15 @@ const  Index = () => {
 
   return (
     <>
+      {/** Gestion du SEO ici
+       */}
       <SEO
         description="Cv V de GERMAIN strapi gatsby"
         lang="fr"
         title="CV Victor de GERMAIMN gatsby strapi"
       />
-      <Layout>
-        {/* <Button>
-      <FaHome />
-    </Button>
 
-
-      <Button
-        to="https://github.com/jeremylynch/gatsby-strapi-starter"
-        className="btn btn-primary btn-lg"
-      >
-        <FaGithub className="mr-1" />
-        View on Github
-      </Button> */}
-      </Layout>
+      <Layout/>
     </>
   )
 }

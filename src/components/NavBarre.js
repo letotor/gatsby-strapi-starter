@@ -16,6 +16,7 @@ let StyledNavbar = styled(props => <Navbar {...props}/>)`
   top: 0;
   z-index: 10;
   background-color: transparent;
+  color: transparent;
 `
 
 const Header = (props) => {
@@ -24,7 +25,7 @@ const Header = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <StyledNavbar color="light" light expand="md">
+    <StyledNavbar color="dark" light expand="md">
       <Container>
         <Link to="/index" className="navbar-brand">
           <img src={logo} alt="Logo" height="25px"/>

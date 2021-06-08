@@ -1,5 +1,10 @@
 import React from 'react'
 import { contact } from '../data/siteConfig'
+import styled from 'styled-components'
+const Container = styled.div`
+  border: 2px solid #4a89dc;
+  border-radius: 7px;
+`
 
 const Contact = ({contact}) => {
     return (
@@ -7,7 +12,7 @@ const Contact = ({contact}) => {
         {/* <h1>CONTACT COMPONENT</h1> */}
         <hr className="d-print-none" />
 
-        <div
+        <Container
           data-aos="fade-right"
           className="contant-section px-3 px-lg-4 pb-4 d-print-none"
           id="contact"
@@ -91,9 +96,9 @@ const Contact = ({contact}) => {
                         </div>
                     </div> */}
           </div>
-        </div>
+        </Container>
       </>
-    );
+    )
 }
 
 export default Contact

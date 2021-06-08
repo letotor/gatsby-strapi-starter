@@ -1,22 +1,31 @@
 import React, {useState} from 'react';
 import styled from 'styled-components'
-import {FaChevronUp} from "react-icons/fa"
+import { BsChevronUp } from "react-icons/bs"
 
-
-const ScrollUp = () =>{
 
   /* Gestion de l'impression*/
 const ScrollButton = styled.button`
+  width:10px;
+  height:10px;
+  border-radius:100%;
+
   @media print {
-      display: none !important;
+    display: none !important;
   }
-`;
+`
+const WrapperChevron = styled.div`
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  border: 1px solid, blue;
+  font-weight: bold;
+`
 
- 
-
+const ScrollUp = () =>{
 
   const [showScroll, setShowScroll] = useState(false)
-
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400){
       setShowScroll(true)
@@ -44,9 +53,9 @@ if (typeof window !== "undefined") {
         data-scroll="up"
         type="button"
         onClick={scrollTop}
-        style={{ height: 40, display: showScroll ? "flex" : "none" }}
-      >^
-         <FaChevronUp/>
+        style={{ textAlign: "justify", display: showScroll ? "flex" : "none" }}
+      >
+        <WrapperChevron> <BsChevronUp/></WrapperChevron>
       </ScrollButton>
     </>
   )
