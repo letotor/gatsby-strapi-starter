@@ -57,6 +57,20 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: gtm,
@@ -79,7 +93,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        ssr: true
+        ssr: true,
         // displayName: false,
         // minify: false
         // see docs
@@ -94,7 +108,7 @@ module.exports = {
         // contentTypes: [`article`, `user`],
         contentTypes: [`jobs`, `formations`],
         //If using single types place them in this array.
-          singleTypes: [`hero`],
+        singleTypes: [`header`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {
           identifier: "",

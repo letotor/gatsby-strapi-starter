@@ -1,5 +1,5 @@
 import React, { useState, Fragment } from "react"
- import Formation from "./Formation"
+ import Formation from "../components/Formation/Formation"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
@@ -7,9 +7,10 @@ import styled from 'styled-components'
 const Formations = () => {
 
 const CardFormation = styled.div`
-
-    
-    padding-bottom: 0px;
+  display: grid;
+  margin: 0 1rem;
+  backgroundcolor: #453d4e;
+  padding-bottom: 0px;
 `
 
 
@@ -52,7 +53,7 @@ const CardFormation = styled.div`
           Diplomes - formations
         </h2>
         {/* <pre>{JSON.stringify(data, null, 4)}</pre> */}
-        <CardFormation className="d-flex justify-content-start ">
+        <CardFormation >
           {formations &&
             formations.map((formation, index) => (
               <Formation

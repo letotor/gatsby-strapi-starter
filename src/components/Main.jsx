@@ -4,13 +4,13 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
 import Resumes from './Resumes'
 import Exp from './Exp'
 import Contact from './Contact'
-import Formation from './Formation'
+import Formation from '../components/Formation/Formation'
 import Hobbies from './Hobbies'
 import Skills from './Skills'
 import siteConfig from '../data/siteConfig'
 
 import styled from "styled-components";
-import Formations from './Formations'
+import Formations from "../containers/Formations"
 
 const PageBreak = styled.div`
   @media print {

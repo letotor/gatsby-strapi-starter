@@ -124,7 +124,7 @@ const StyledNavbarre =styled(NavBarre)`
 
           <Hero
             titre={siteConfig.siteTitle}
-            subTitle={siteConfig.subTitle}
+            sousTitre={siteConfig.subTitle}
             //  avatar={withPrefix(siteConfig.authorAvatar)}
           />
 
