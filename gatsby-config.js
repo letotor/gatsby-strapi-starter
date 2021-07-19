@@ -9,6 +9,10 @@ require("dotenv").config({
 })
 
 module.exports = {
+  flags: {
+    DEV_SSR: true,
+    FAST_DEV: true,
+  },
   siteMetadata: {
     google: `bckrXFVr91bgwp1o8wdtcaTdpzmp3Jq7vEKSyP4Wy9s`,
     title: `DGwebcreation`,
@@ -71,6 +75,24 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content-md`,
+        path: `${__dirname}/src/content/markdown`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [],
+      },
+    },
+    {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: gtm,
@@ -93,7 +115,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        ssr: true,
+        // ssr: true,
         // displayName: false,
         // minify: false
         // see docs

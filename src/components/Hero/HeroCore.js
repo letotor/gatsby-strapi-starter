@@ -111,6 +111,8 @@ import {
                     object-fit="cover"
                   /> */}
                   <GatsbyImage
+                   width="235"
+                 height= "255"
                     image={
                       data.strapiHeader.avatar.childImageSharp.gatsbyImageData
                     }

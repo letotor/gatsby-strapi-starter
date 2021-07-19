@@ -1,77 +1,30 @@
-// // gatsby-node.js
-// const fetch = require("node-fetch")
-// const path = require("path")
-// const slugify = require("slugify")
+module.exports.createPages = async ({ graphql, actions }) => {
+  // **Note:** The graphql function call returns a Promise
+  // see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise for more info
+  const result = await graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              title
+              slug
+              layout
+              Title
+              Date
+            }
+            html
+          }
+        }
+      }
+    }
+  `)
+  console.log(JSON.stringify(result, null, 4))
+}
 
-
-// exports.sourceNodes = async ({
-//   actions,
-//   createNodeId,
-//   createContentDigest,
-// }) => {
-//   const { createNode } = actions
-//   const response = await fetch("https://picsum.photos/v2/list?limit=10")
-//   const data = await response.json()
-//   for (const result of data) {
-//     const nodeId = createNodeId(`${result.id}`)
-//     const nodeContent = JSON.stringify(result)
-//     const node = Object.assign({}, result, {
-//       id: nodeId,
-//       originalId: result.id,
-//       parent: null,
-//       children: [],
-//       internal: {
-//         type: "Image",
-//         content: nodeContent,
-//         contentDigest: createContentDigest(result),
-//       },
-//     })
-//     createNode(node)
-//   }
-// }
-
-
-// exports.createResolvers = ({ createResolvers }) => {
-//   const resolvers = {
-//     Image: {
-//       slug: {
-//         resolve: (source) => {
-//           return slugify(`${source.author} ${source.originalId}`, {
-//             lower: true,
-//           })
-//         },
-//       },
-//     },
-//   }
-//   createResolvers(resolvers)
-// }
-// exports.createSchemaCustomization = ({ actions }) => {
-//   const { createTypes } = actions
-//   const typeDefs = `
-//     type Image implements Node {
-//       slug: String!
-//     }
-//   `
-//   createTypes(typeDefs)
-// }
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions
-//   const images = await graphql(`
-//     query {
-//       allImage {
-//         nodes {
-//           slug
-//         }
-//       }
-//     }
-//   `)
-//   images.data.allImage.nodes.forEach((image) => {
-//     createPage({
-//       path: image.slug,
-//       component: path.resolve("./src/templates/image.js"),
-//       context: {
-//         slug: image.slug,
-//       },
-//     })
-//   })
-// }
+module.exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === "MarkDownRemark") {
+    console.log(JSON.stringify(node, undefined, 4))
+  }
+}
