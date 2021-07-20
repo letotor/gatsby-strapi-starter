@@ -22,9 +22,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
   console.log(JSON.stringify(result, null, 4))
 }
 
-module.exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === "MarkDownRemark") {
-    console.log(JSON.stringify(node, undefined, 4))
-  }
-}
+// module.exports.onCreateNode = ({ node, actions }) => {
+//   const { createNodeField } = actions
+//   if (node.internal.type === "MarkDownRemark") {
+//     console.log(JSON.stringify(node, undefined, 4))
+//   }
+// }

@@ -7,7 +7,7 @@ Comment:  This is a comment intended to demonstrate
           metadata that spans multiple lines, yet  
           is treated as a single value.  
 CSS:      http://example.com/standard.css
-slug : '/react/test'
+slug : '/react/test/'
 ---
 
 
