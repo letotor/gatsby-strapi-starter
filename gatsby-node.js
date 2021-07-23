@@ -1,6 +1,8 @@
+const path = require(`path`)
+const slash = require(`slash`)
+
 module.exports.createPages = async ({ graphql, actions }) => {
-  // **Note:** The graphql function call returns a Promise
-  // see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise for more info
+  const { createPage } = actions
   const result = await graphql(`
     {
       allMarkdownRemark {
@@ -19,12 +21,16 @@ module.exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+   if (result.errors) {
+     throw new Error(result.errors)
+   }
   console.log(JSON.stringify(result, null, 4))
 }
 
-// module.exports.onCreateNode = ({ node, actions }) => {
-//   const { createNodeField } = actions
-//   if (node.internal.type === "MarkDownRemark") {
-//     console.log(JSON.stringify(node, undefined, 4))
-//   }
-// }
+// const pageTemplate = path.resolve(`./src/templates/page.js`)
+// result.data.allMarkdownRemark.edges.forEach((edge) => {
+//   createPage({
+//     path: `/${edge.node.slug}/`,
+//     component: slash(pageTemplate),
+//   })
+// })

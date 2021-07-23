@@ -1,5 +1,5 @@
-let theme = {
-  primary: "#007bff",
-}
+// let theme = {
+//   primary: "#007bff",
+// }
 
-export default theme
+// export default theme

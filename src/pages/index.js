@@ -1,6 +1,6 @@
 import React,{useEffect} from "react"
 
-import Layout from "../components/layout"
+import Layout from "../components/layoutcv"
 import SEO from "../components/seo"
 import AOS from 'aos'
 
