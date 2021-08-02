@@ -7,7 +7,8 @@
 
 
 import React, { useState, useEffect } from "react"
- import { Container } from "reactstrap"
+//  import { Container } from "reactstrap"
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
 import { useStaticQuery, graphql } from "gatsby"
 
 
@@ -114,22 +115,24 @@ const StyledNavbarre =styled(NavBarre)`
         {/* // <button onClick={}>Switch Theme</button> */}
         {/* <div className="page-content ml-3"> */}
 
-        <Container>
-          <Header
-            headerImg="DGwebCreation" //{siteConfig.siteCover}
-            authorName={siteConfig.authorName}
-            monurl="url"
-            urlCurrent={""} /*{url_Function}*/
-          />
+        <MDBContainer>
+          <div className="justify-content-md-center">
+            <Header
+              headerImg="DGwebCreation" //{siteConfig.siteCover}
+              authorName={siteConfig.authorName}
+              monurl="url"
+              urlCurrent={""} /*{url_Function}*/
+            />
 
-          <Hero
-            titre={siteConfig.siteTitle}
-            sousTitre={siteConfig.subTitle}
-            //  avatar={withPrefix(siteConfig.authorAvatar)}
-          />
+            <Hero
+              titre={siteConfig.siteTitle}
+              sousTitre={siteConfig.subTitle}
+              //  avatar={withPrefix(siteConfig.authorAvatar)}
+            />
 
-          <Main />
-        </Container>
+            <Main />
+          </div>
+        </MDBContainer>
         {/* </div> */}
         <Footer />
         <ScrollUp />

@@ -10,12 +10,13 @@ import AOS from 'aos'
 // import "../assets/css/css/bootstrap.min.css"
 /**
  * surcharge du fichier bootstrap pour le style */ 
-import "../assets/css/css/style.css"
+
+// import "../assets/css/css/style.css"
 // import "../assets/css/css/site.css"
-import "../assets/css/css/main.css"
-import "../assets/css/css/dark-theme.css"
-import "../assets/css/css/print.css"
-import "../assets/css/css/aos.css"
+// import "../assets/css/css/dark-theme.css"
+// import "../assets/css/css/print.css"
+// import "../assets/css/css/aos.css"
+// import "../assets/css/css/main.css"
 
 
 /**
@@ -24,6 +25,15 @@ import "../assets/css/css/aos.css"
 import "@fortawesome/fontawesome-free/css/all.min.css"
 import "bootstrap-css-only/css/bootstrap.min.css"
 import "mdbreact/dist/css/mdb.css"
+
+
+// import "../assets/css/css/bootstrap5/bootswatchLight.min.css"
+import "../assets/css/css/main.css"
+import "../assets/css/css/site.css"
+import "../assets/css/css/print.css"
+import "../assets/css/css/aos.css"
+// import "bootstrap-css-only/css/bootstrap.min.css"
+
 
 /**
  * Point d'entrée de l'application REACTJs

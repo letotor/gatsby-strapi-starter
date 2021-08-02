@@ -12,7 +12,7 @@ const Exp = ({jobs}) => {
           data-aos="zoom-in-up"
           className="timeline-card timeline-card-primary card shadow-sm"
         >
-          <div className="card-body">
+          <div className="card-body border">
             <div className="h5 mb-1">
               {jobs.title}
               {jobs.company && (

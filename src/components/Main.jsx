@@ -21,6 +21,7 @@ const PageBreak = styled.div`
 const Cover = styled.div`
   border-radius: 0 0 10px 10px;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  padding: 2rem;
 `
 
 
@@ -46,7 +47,7 @@ console.log(skillOne, skilltwo, skillThree);
 
     return (
       <>
-        <Cover color="white">
+        <Cover className="pl-3 text-justify" color="white">
           <span id="resume">
             <Resumes
               contact={siteConfig.contact}
@@ -56,7 +57,7 @@ console.log(skillOne, skilltwo, skillThree);
               color={siteConfig.company.color}
             />
           </span>
- 
+
           <hr className="d-print-none-off" />
           <div className="skills-section px-3 px-lg-4">
             <h2
