@@ -41,8 +41,6 @@ const Main = () => {
   const skillOne = filterFlag(siteConfig.skills, 1);
   const skilltwo = filterFlag(siteConfig.skills, 2);
   const skillThree = filterFlag(siteConfig.skills,3);
-console.log(skillOne, skilltwo, skillThree);
-  
 
   // useEffect(test, []);
 

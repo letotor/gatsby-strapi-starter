@@ -7,7 +7,6 @@
 
 
 import React, { useState, useEffect } from "react"
-//  import { Container } from "reactstrap"
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -19,10 +18,8 @@ import Hero from "./Hero/HeroCore"
 import Main from "./Main"
 
  import ScrollUp from "./ScrollUp"
-// import withprefix from '../gastby'
 
-// Gestion du theme provider
-// import dummyData from "./data";
+
 import styled, { ThemeProvider } from "styled-components"
 import { GlobalStyles } from "./ThemeGlobalStyle/globalStyle"
 import { lightTheme, darkTheme } from "./ThemeGlobalStyle/themes"
@@ -83,9 +80,7 @@ const StyledNavbarre =styled(NavBarre)`
   let { title, phone, address } = data.site.siteMetadata
   return (
     <>
-      {/* <Header siteTitle={`${title} ${phone} ${address}`} /> */}
-      {/* <main>{children}</main> */}
-      {/* <Formations /> */}
+
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <GlobalStyles />
 
