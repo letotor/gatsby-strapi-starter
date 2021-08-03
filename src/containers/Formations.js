@@ -37,13 +37,13 @@ const CardFormation = styled.div`
  `)
 
        const [value, setValue] = useState(0)
-   console.log("formations->", data)
+  // console.log("formations->", data)
     const {allStrapiFormations:{nodes:formations},} =data;
   // let [strapiId,visible, title,where,year]=formations[0]
-   console.log('--------------->formation',formations)
+   //console.log('--------------->formation',formations)
   return (
     <Fragment>
-      {/* <!-- Formations --> */}
+     
       <hr className="d-print-none-off" />
       <div className="education-section px-3 px-lg-4 pb-4">
         <h2
@@ -52,7 +52,7 @@ const CardFormation = styled.div`
         >
           Diplomes - formations
         </h2>
-        {/* <pre>{JSON.stringify(data, null, 4)}</pre> */}
+       
         <CardFormation >
           {formations &&
             formations.map((formation, index) => (

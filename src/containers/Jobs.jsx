@@ -36,7 +36,6 @@ const Jobs = () => {
     }
   `)
 
-console.log("jobsData------------>", jobsData.allStrapiJobs)
   const [value, setValue] = useState(0)
 
   return (

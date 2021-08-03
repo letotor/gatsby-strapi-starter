@@ -77,11 +77,6 @@ import {
        */
       return (
         <>
-          {/* /** Test code de retour  */}
-          <pre>
-            {JSON.stringify(getImage(data.strapiHeader.cover), null, 4)}
-          </pre>
-          {/* <pre>{JSON.stringify(data, null, 4)}</pre> */}
           <Cover
             color={color}
             url={data.strapiHeader.cover.publicURL}

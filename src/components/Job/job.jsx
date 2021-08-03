@@ -17,7 +17,7 @@ const Job = ({
 
 // const [state, useState] = useState(isVisible)
 
-console.log("tototototototo",tasks)
+//console.log("tototototototo",tasks)
 
     return (
       <>
