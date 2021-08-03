@@ -11,6 +11,7 @@ import siteConfig from '../data/siteConfig'
 
 import styled from "styled-components";
 import Formations from "../containers/Formations"
+import Jobs from '../containers/Jobs'
 
 const PageBreak = styled.div`
   @media print {
@@ -116,24 +117,7 @@ console.log(skillOne, skilltwo, skillThree);
           </div>
 
           {/* <!-- Experiences professionnelles --> */}
-          <PageBreak />
-          <hr className="page-break-after d-print-none-off" />
-
-          <div className=" work-experience-section px-3 px-lg-4">
-            <h2
-              id="experience"
-              className="h3 mb-4 text-uppercase tracking-in-contract"
-            >
-              Expériences professionnelles
-            </h2>
-            <div className="timeline">
-              {siteConfig.jobs &&
-                siteConfig.jobs.map((job, index) => (
-                  <Exp key={index} jobs={job} />
-                ))}
-            </div>
-          </div>
-
+         <Jobs/>
           {/* <!-- Formations --> */}
           <Formations />
 

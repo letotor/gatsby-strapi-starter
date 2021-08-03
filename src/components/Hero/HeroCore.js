@@ -79,18 +79,12 @@ import {
         <>
           {/* /** Test code de retour  */}
           <pre>
-            {JSON.stringify(
-              getImage(data.strapiHeader.cover),
-              null,
-              4
-            )}
+            {JSON.stringify(getImage(data.strapiHeader.cover), null, 4)}
           </pre>
           {/* <pre>{JSON.stringify(data, null, 4)}</pre> */}
           <Cover
             color={color}
-            url={
-              data.strapiHeader.cover.publicURL
-            }
+            url={data.strapiHeader.cover.publicURL}
             alt="toto"
           >
             {/* className="p-3 p-lg-4" */}
@@ -98,28 +92,30 @@ import {
               {/* //image et ecnadreé */}
               <MDBCol lg="4" md="5">
                 {/* <div className="col-lg-4 col-md-5"> */}
-                <Avatar
-                  className="hover-effect  shadow-sm "
-                  height="270"
-                  width="270"
-                  background="black"
-                >
-                  {/*   avatar bg-white  */}
-                  {/* <img
+                <div className="align-middle">
+                  <Avatar
+                    className="hover-effect  shadow-sm "
+                    height="270"
+                    width="270"
+                    background="black"
+                  >
+                    {/*   avatar bg-white  */}
+                    {/* <img
                     src={data.strapiHeader.avatar.publicURL}
                     alt="avatar"
                     object-fit="cover"
                   /> */}
-                  <GatsbyImage
-                   width="235"
-                 height= "255"
-                    image={
-                      data.strapiHeader.avatar.childImageSharp.gatsbyImageData
-                    }
-                    alt="avatarImg"
-                    object-fit="cover"
-                  />
-                </Avatar>
+                    <GatsbyImage
+                      width="235"
+                      height="255"
+                      image={
+                        data.strapiHeader.avatar.childImageSharp.gatsbyImageData
+                      }
+                      alt="avatarImg"
+                      object-fit="cover"
+                    />
+                  </Avatar>
+                </div>
                 {/* </div> */}
               </MDBCol>
 

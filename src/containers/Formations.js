@@ -9,7 +9,7 @@ const Formations = () => {
 const CardFormation = styled.div`
   display: grid;
   margin: 0 1rem;
-  backgroundcolor: #453d4e;
+  background-color: #453d4e;
   padding-bottom: 0px;
 `
 

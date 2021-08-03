@@ -16,11 +16,13 @@ const Cover = styled.div`
 
 const Avatar = styled.div`
   background-color: #ffffff;
+  margin:auto;
   border-radius: 5px 5px 0 0;
   max-width: 250px;
   max-height: 250px;
   text-align: center;
   overflow: hidden;
+  align-items: center;
 
   @media (min-width: 48em) {
     margin-bottom: -80px;
@@ -42,7 +44,7 @@ const TitleStyle = {
   background: "rgba(0,0,0,0.3)",
   textShadow: "black 0.1em 0.1em 0.2em",
   borderRadius: "10px",
-  width: "100px",
+  width: "auto",
 }
 const BoutonStyle = {
   borderRadius: "10rem",

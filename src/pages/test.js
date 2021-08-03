@@ -1,7 +1,7 @@
 import React from "react"
 import { AuthService, useAuth } from "gatsby-theme-auth0"
 
-export default () => {
+export default  () => {
   const { isLoggedIn, profile } = useAuth()
   return (
     <div>
