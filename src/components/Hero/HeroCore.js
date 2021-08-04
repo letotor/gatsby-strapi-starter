@@ -119,7 +119,9 @@ import {
                 style={TitleStyle}
                 lg="7"
                 md="7"
-                className="text-center text-md-start"
+                
+               
+                className="text-center text-md-start mt-md-0 mt-2"
               >
                 {/* <div className="col-lg-7 col-md-7 text-center text-md-start"> */}
                 <MDBTypography

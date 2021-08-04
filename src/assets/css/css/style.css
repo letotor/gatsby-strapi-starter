@@ -54,7 +54,7 @@ color: #ffffff;
 }
 /*  fin lire plus lire moins */
 
-.badge-pill.badge-primary{
+/* .badge-pill.badge-primary{
   background-color: #4a89dc;
 }
 
@@ -63,7 +63,7 @@ color: #ffffff;
 }
 .badge-pill.badge-success{
   background-color: #37bc9b;;
-}
+} */
 
 #contact, #etatcivil {
   border:2px solid #4a89dc;

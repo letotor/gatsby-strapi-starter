@@ -30,6 +30,7 @@ const Jobs = () => {
           }
           stacks {
             name
+            color
           }
         }
       }

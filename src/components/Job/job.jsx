@@ -37,24 +37,29 @@ const Job = ({
               <div>
                 {tasks.map((task, index) => (
                   <div key={index}>
-                    <FaRegArrowAltCircleRight />
-                    {" "}{task.name}
+                    <FaRegArrowAltCircleRight /> {task.name}
                   </div>
                 ))}
               </div>
 
               <div>
                 {method && (
-                <span style={{color:`${method.color}`}}className="badge badge-pill badge-success">
-                  Méthodologie {method.name}
-                </span>
-              )}
+                  <span
+                    style={{ backgroundColor: `${method.color}` }}
+                    className="badge rounded-pill bg-success"
+                  >
+                    Méthodologie {method.name}
+                  </span>
+                )}
               </div>
               <div>
                 <br />
                 {stacks.map((stack, index) => (
                   <span key={index}>
-                    <span className="badge badge-pill badge-primary">
+                    <span
+                      style={{ backgroundColor: `${stack.color}` }}
+                      className="badge rounded-pill bg-primary"
+                    >
                       {stack.name}
                     </span>
                     <span> </span>
